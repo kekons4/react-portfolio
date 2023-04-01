@@ -1,0 +1,852 @@
+:root {
+  --bg-color-one: #001328;
+  --bg-color-two: #010e1d;
+  --nav-color: #011f41;
+  --box-shadow-color: rgb(14, 86, 241);
+  --header-font-color: rgb(0, 225, 255);
+  --text-font-color: azure;
+  --card-bg-color: #022b5a;
+}
+
+@font-face {
+  font-family: "code_saverregular";
+  src: url("codesaver-regular-webfont.woff2") format("woff2"),
+    url("codesaver-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* For smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-color-one);
+  font-family: "code_saverregular", sans-serif;
+}
+
+/*--------------------------------Navigation Bar-------------------------------------------------------*/
+nav {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background-color: var(--nav-color);
+  align-items: center;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+/* This contains My name and hamburger menu */
+nav .container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+/* contains the links to the rest of the page*/
+nav .container-two {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+/* Changes the title in the navbar */
+nav span {
+  color: var(--text-font-color);
+  font-size: 30px;
+  padding: 14px 16px;
+}
+
+/* defines the rules for the links in the nav bar */
+nav a {
+  display: block;
+  color: var(--text-font-color);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  transition: box-shadow 0.6s;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+/* changes background and adds boxshadow on hover */
+nav a:hover {
+  background-color: var(--card-bg-color);
+  box-shadow: 0px 0px 18px var(--box-shadow-color) inset;
+}
+
+/* Affects the hamburger menu */
+nav a.icon:hover {
+  background-color: var(--card-bg-color);
+  color: var(--text-font-color);
+}
+
+nav a.hidden:hover {
+  background-color: var(--card-bg-color);
+}
+
+nav a.active {
+  background: var(--nav-color);
+  color: white;
+}
+
+/* controls the last link in the navbar */
+nav a.end {
+  float: right;
+  position: relative;
+}
+
+nav a.end:hover {
+  background-color: var(--card-bg-color);
+  color: white;
+}
+
+/* by default the hamburger menu icon is not displayed */
+nav .icon {
+  display: none;
+}
+
+.a .hidden {
+  display: none;
+}
+
+/*----------------------------------About Me--------------------------------------*/
+
+/* Creates to space and the top of the page */
+.space {
+  height: 100px;
+}
+
+
+.bg-color-one, .App {
+  background-color: var(--bg-color-one);
+}
+
+/* This defines the spacing and structural orientation of all other sections */
+section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: unset;
+  margin-top: 20px;
+  line-height: 1.5;
+  /*border: 1px white solid;*/
+}
+
+/* contains the image, Name, school, degree, icon groups */
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin: 10px 50px 10px 10px;
+  color: var(--text-font-color);
+  overflow: hidden;
+  letter-spacing: 2px;
+  /*border: 1px var(--text-font-color) solid;*/
+}
+
+/* controls my name under image */
+.content .title {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 34px;
+}
+
+/* The Ohio State University */
+.content .school {
+  font-size: 28px;
+  color: rgb(255, 17, 0);
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* Philosophy */
+.content .degree {
+  font-size: 26px;
+  color: gold;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* image of me */
+.content img {
+  border-radius: 100%;
+  border: 3px solid #efefef;
+  height: 15em;
+  width: 20em;
+}
+
+/* icons that are links to my github, etc.. */
+.content-icon-cont {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 5px;
+  font-size: 50px;
+  text-decoration: none;
+}
+
+.content-icon-cont i {
+  text-decoration: none;
+  margin-right: 10px;
+  margin-left: 10px;
+  color: var(--header-font-color);
+}
+
+/* contains the title, description of me, interests, and education lists */
+.content-two {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 10px;
+  color: var(--text-font-color);
+  overflow: hidden;
+  width: 50%;
+  letter-spacing: 2px;
+}
+
+/* About me, title */
+.content-two span {
+  font-size: 40px;
+  color: var(--header-font-color);
+  border-bottom: 1px grey solid;
+}
+
+.content-two p {
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+  font-size: 22px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.content-two li {
+  margin-top: 5px;
+}
+
+.edu-int-cont {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: unset;
+  margin-top: 30px;
+}
+
+.interests {
+  color: var(--text-font-color);
+  font-size: 17px;
+  overflow: hidden;
+  margin-right: 50px;
+}
+
+.interests span {
+  color: var(--header-font-color);
+  font-size: 22px;
+}
+
+.education {
+  color: var(--text-font-color);
+  font-size: 17px;
+  overflow: hidden;
+}
+
+.education span {
+  color: var(--header-font-color);
+  font-size: 22px;
+}
+
+/*-------------------------------Skills Section----------------------------------*/
+
+/* Controls the title and the container for skill boxes */
+#skills {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  padding-bottom: 100px;
+  padding-top: 110px;
+  background-color: var(--bg-color-two);
+  color: var(--header-font-color);
+  font-size: 36px;
+  width: 100%;
+}
+
+/* skills title */
+#skills span {
+  border-bottom: 1px grey solid;
+}
+
+.skills {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  color: var(--text-font-color);
+  background-color: #010e1d;
+}
+
+/* controls the skill boxes size, margins, and css behaviors */
+.skills-cont {
+  flex-basis: 200px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 25px;
+  padding: 50px;
+  border-radius: 5px;
+  transition: box-shadow 0.5s;
+}
+
+.skills-cont:hover {
+  box-shadow: inset 0px 0px 40px var(--box-shadow-color);
+  /* animation-name: breathing-skills; */
+  /* animation-duration: 4s; */
+  /* animation-iteration-count: infinite; */
+}
+
+/* title of each individual skill */
+.skills span {
+  color: var(--header-font-color);
+  font-size: 26px;
+}
+
+/* contorls the awesome font icon margin */
+.skills .icon {
+  margin-bottom: 10px;
+}
+
+.skills p {
+  display: none;
+  font-size: 17px;
+}
+
+/*----------------------------Experience Section--------------------------------*/
+
+#experience {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  padding-top: 10px;
+  padding-bottom: 50px;
+  color: var(--header-font-color);
+  font-size: 36px;
+  width: 100%;
+}
+
+/* title */
+#experience span {
+  border-bottom: 1px grey solid;
+  margin-bottom: 60px;
+}
+
+.experience {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.experience .card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--card-bg-color);
+  color: var(--text-font-color);
+  padding: 10px;
+  border: 1px var(--text-font-color) solid;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px var(--box-shadow-color);
+  width: 80%;
+  transition: box-shadow 0.5s;
+}
+
+.experience .connector {
+  border-right: 5px var(--text-font-color) solid;
+  border-radius: 100%;
+  height: 50px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.experience .card:hover {
+  animation-name: breathing;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+.experience .card span {
+  font-size: 35px;
+}
+
+.experience .card li {
+  margin: 10px;
+  font-size: 20px;
+}
+
+.experience p {
+  font-size: 15px;
+}
+
+.experience i {
+  font-size: 15px;
+  color: grey;
+}
+
+/*----------------------------------Projects Stuff-----------------------------------*/
+
+#projects {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  padding-bottom: 100px;
+  padding-top: 110px;
+  background-color: var(--bg-color-two);
+  color: var(--header-font-color);
+  font-size: 36px;
+  width: 100%;
+}
+
+/* title */
+#projects span {
+  border-bottom: 1px grey solid;
+}
+
+/* Controls the orientation of all the cards */
+.projects {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color-two);
+}
+
+/* Controls the format of cards */
+.projects .card {
+  flex-basis: 500px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--nav-color);
+  margin-top: 50px;
+  padding: 15px;
+  border: 1px var(--text-font-color) solid;
+  border-radius: 5px;
+  width: 50%;
+  text-decoration: none;
+  box-shadow: 0px 0px 10px var(--box-shadow-color);
+  transition: box-shadow 0.5s;
+}
+
+.projects .card:hover {
+  animation-name: breathing;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+/* card titles */
+.projects .card span {
+  color: var(--text-font-color);
+  font-size: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Card image */
+.projects .card img {
+  width: 70%;
+  height: 70%;
+}
+
+
+/* description of the project */
+.projects .card p {
+  font-size: 17px;
+  width: 90%;
+}
+
+.projects .card a {
+  text-decoration: none;
+}
+
+.projects .author {
+  font-size: 15px;
+  color: gray;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+/* contains the buttons to code and or live app */
+.projects .btn-cont {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+/* The buttons to the links */
+.projects .github {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  border: 2px var(--header-font-color) solid;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-right: 10px;
+  width: 100px;
+  text-decoration: none;
+}
+
+.projects .github i {
+  color: var(--header-font-color);
+  text-decoration: none;
+}
+
+.projects .github span {
+  color: var(--header-font-color);
+  font-size: 15px;
+  margin-left: 10px;
+  margin-top: 15px;
+  text-decoration: none;
+  border: none;
+}
+
+/*-------------------------------------Contact Stuff------------------------------------*/
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  padding-bottom: 100px;
+  padding-top: 110px;
+  color: var(--header-font-color);
+  font-size: 36px;
+  width: 100%;
+}
+
+/* title */
+#contact span {
+  border-bottom: 1px grey solid;
+  margin-bottom: 50px;
+}
+
+/* rules of the entire form */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  padding-right: 70px;
+  padding-left: 70px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: var(--card-bg-color);
+  border: 1px var(--text-font-color) solid;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px var(--box-shadow-color);
+  transition: box-shadow 0.5s;
+}
+
+.contact form:hover {
+  animation-name: breathing;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+/* title for each part in the form */
+.contact form label {
+  color: var(--text-font-color);
+  font-size: 23px;
+  margin-top: 15px;
+  letter-spacing: 2px;
+}
+
+.contact input {
+  padding: 5px;
+  background-color: #efefef;
+  border: 2px grey solid;
+  border-radius: 5px;
+}
+
+.contact textarea {
+  background-color: #efefef;
+  border: 2px grey solid;
+  border-radius: 5px;
+}
+
+.contact form button {
+  color: var(--header-font-color);
+  border: 2px var(--header-font-color) solid;
+  border-radius: 5px;
+  background-color: var(--card-bg-color);
+  font-size: 14px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 20px;
+}
+
+.contact form button:hover {
+  background-color: var(--box-shadow-color);
+  border: 2px var(--text-font-color) solid;
+  color: var(--text-font-color);
+}
+
+/*------------------------------------------Footer Stuff-------------------------------*/
+
+footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color-two);
+  width: 100%;
+  margin: 0;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: gray;
+  font-size: 15px;
+}
+
+/*--------------------------------------- Animations ------------------------------------*/
+
+/* this animation does a box-shadow growing and shrinking effect */
+@keyframes breathing {
+  0% {
+    box-shadow: 0px 0px 10px var(--box-shadow-color);
+  }
+
+  50% {
+    box-shadow: 0px 0px 40px var(--box-shadow-color);
+  }
+
+  100% {
+    box-shadow: 0px 0px 10px var(--box-shadow-color);
+  }
+}
+
+/* same as the above animation but for the skill boxes */
+@keyframes breathing-skills {
+  0% {
+    box-shadow: inset 0px 0px 0px var(--box-shadow-color);
+  }
+
+  50% {
+    box-shadow: inset 0px 0px 40px var(--box-shadow-color);
+  }
+
+  100% {
+    box-shadow: inset 0px 0px 0px var(--box-shadow-color);
+  }
+}
+
+/*----------------------------------------Media Responsive Stuff-----------------------*/
+
+@media screen and (max-width: 1220px) {
+  .edu-int-cont {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1167px) {
+  .edu-int-cont {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 889px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav .container {
+    width: 100%;
+  }
+
+  nav a:not(:nth-child(6)) {
+    display: none;
+  }
+
+  nav a.icon {
+    float: left;
+    display: block;
+  }
+
+  nav a.hidden {
+    display: block;
+    float: left;
+  }
+
+  nav.responsive {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav .container-two {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav.responsive .icon {
+    left: 0;
+    top: 0;
+  }
+
+  nav.responsive a {
+    float: left;
+    display: block;
+    text-align: left;
+  }
+
+  section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .content {
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+  }
+
+  .content-two {
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .content-two p {
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .edu-int-cont {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 681px) {
+  section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .content {
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+  }
+
+  .content-two {
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .content-two p {
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 80%;
+  }
+
+  .edu-int-cont {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 75%;
+  }
+
+  .projects .card {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .content-two p {
+    width: 80%;
+  }
+
+  .projects .card {
+    width: 70%;
+  }
+
+  .projects .btn-cont {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .content .school {
+    font-size: 22px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
